@@ -7,9 +7,11 @@
     $db_pass = '';
     $connect = mysqli_connect('localhost',$db_user,$db_pass);
 	mysqli_select_db($connect,$db_name) or die(mysqli_error($connect));
-	$query="INSERT INTO Uzytkownik(login,haslo)VALUES('$login','$haslo')";
-	mysqli_query($connect,$query);
-	session_start();
-	setcookie("login",$login,time() + (86400 * 30), "/");
-	setcookie("password",$haslo,time() + (86400 * 30), "/");
-?>
+	$query="SELECT * FROM uzytkownik WHERE login like'$login' AND haslo like '$haslo';"
+	if(mysqli_query($connect,$query))
+	{
+		session_start();
+		setcookie("login",$login,time() + (86400 * 30), "/");
+		setcookie("password",$haslo,time() + (86400 * 30), "/");
+	}
+	?>
