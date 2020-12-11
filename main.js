@@ -3,6 +3,7 @@
 //----------------------------------------------
 
 //-------------INNER--HTMLS-------------------------
+page1 = "<input>";
 
 
 // OBIEKT STRONY
@@ -15,7 +16,7 @@ class Page {
 
 page = [];
 page[0] = new Page("Witamy");
-page[1] = new Page("Jedna",1);
+page[1] = new Page(page1,1);
 page[2] = new Page("Druga",2);
 page[3] = new Page("Trzecia",3);
 page[4] = new Page("Cztery",4);
@@ -45,8 +46,15 @@ function showLoginBox(){
     bg.style.filter = "blur(8px)";
 }
 
-function addTask(){
+function quitLoginBox(){
+    let item = document.getElementById("loginBox"); 
+    let bg = document.getElementById("mainContainer");
+    item.style.display = "none";
+    bg.style.filter = "none";
+}
 
+function addTask(){
+ 
 }
 
 //---------------ONCLICKS-------------
@@ -55,6 +63,9 @@ document.getElementById("homeButton").addEventListener("click",function(){
 })
 document.getElementById("loginElement").addEventListener("click",function(){
     showLoginBox();
+})
+document.getElementById("exitButton").addEventListener("click",function(){
+    quitLoginBox();
 })
 
 //--------------------
