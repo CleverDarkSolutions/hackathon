@@ -3,6 +3,8 @@ let userLogin;
 let userPassword;
 //----------------------------------------------
 
+//-------------INNER--HTMLS-------------------------
+
 
 // OBIEKT STRONY
 class Page {
@@ -14,7 +16,7 @@ class Page {
 
 page = [];
 page[0] = new Page("Witamy");
-page[1] = new Page("Pierwsza strona",1);
+page[1] = new Page("Jedna",1);
 page[2] = new Page("Druga",2);
 page[3] = new Page("Trzecia",3);
 page[4] = new Page("Cztery",4);
@@ -44,14 +46,19 @@ function showLoginBox(){
     bg.style.filter = "blur(8px)";
 }
 
-window.onload = function(){
-    addListenersLeftMenu();
+function addTask(){
+
 }
 
 //---------------ONCLICKS-------------
 document.getElementById("homeButton").addEventListener("click",function(){
     openPage(page[0]);
 })
-document.getElementById("loginBox").addEventListener("click",function(){
+document.getElementById("loginElement").addEventListener("click",function(){
     showLoginBox();
 })
+
+//--------------------
+window.onload = function(){
+    addListenersLeftMenu();
+}

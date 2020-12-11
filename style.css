@@ -5,7 +5,6 @@ body {
 
 .mainContainer{
     width: 100%;
-    background: lightgreen;
     height: 100%;
 }
 
@@ -17,13 +16,18 @@ body {
 }
 
 .leftMenuElement{
-    font-size: 3vw;
-    padding-top: 1vw;
+    font-size: 2vw;
+    padding-top: 5vh;
     text-align: center;
     color: white;
     height: 5.23vw;
     border: 5px solid white;
     border-top: none;
+}
+
+.leftMenuElement:hover{
+    font-size: 2.3vw;
+    color:black;
 }
 
 .topSideElement{
@@ -46,6 +50,7 @@ body {
     height: 10vh;
     background: plum;
     border: 5px solid white;
+    user-select: none;
 }
 
 .mainSpace{
@@ -55,6 +60,7 @@ body {
     font-size: 3vw;
     float: left;
     background: powderblue;
+    text-align: center;
 }
 
 .rightSpace{
@@ -93,4 +99,15 @@ body {
     height: 50vh;
     background: snow;
     display: none;
+    font-size: 2vw;
+}
+
+.exitButton{
+    width: 20px;
+    height: 20px;
+    font-size: 2vw;
+    position: relative;
+    top: 0px;
+    left: 600px;
+    text-align: right;
 }
