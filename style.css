@@ -30,6 +30,27 @@ body {
 	letter-spacing: 3px;
 	color: white;
 }
+
+#headTitle{
+	align-text: left;
+	font-size: 75px;
+	float: left;
+	padding: 10px;
+	weight: 100px;
+}
+
+#headPhoto{
+	padding: 10px;
+}
+
+#headText{
+	position: absolute;
+	left: 970px;
+	font-size: 30px;
+	text-align: right;
+	padding: 10px;
+}
+
 #title > img{
 	width: 80px;
 	vertical-align: middle;	
