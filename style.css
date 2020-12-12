@@ -5,8 +5,13 @@ body {
 
 .mainContainer{
     width: 100%;
-	
 	margin: auto;
+}
+.domek{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:50px;
 }
 .mainContainer input[type=submit]{
 	width: 19vw;
