@@ -422,20 +422,21 @@ button[id="addButton"]:hover{
 .editText{
 	width: 40vw;
 	height: 20vw;
-	background: slateblue;
+	background: #619cc9;
 	position: absolute;
 	top: 5vh;
 	left: 5vw;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 .editNote{
 	width: 50vw;
 	height: 30vw;
-	background: sienna;
+	background: #0082e6;
 	position: absolute;
 	left: 30vw;
 	top: 20vh;
+	font-size: 30px;
 }
 
 #buttonKox{
@@ -444,4 +445,6 @@ button[id="addButton"]:hover{
 	position: absolute;
 	right: 5px;
 	bottom: 5px;
+	background:#4CAF50
 }
+
