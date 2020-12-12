@@ -31,7 +31,11 @@ body {
 	margin-top: 2px;
 	
 }
-
+.Gorny_panel{
+	display: flex;
+	justify-content: space-between;
+	background-color: #0082e6;
+}
 .leftMenuElement{
     border-bottom: 2px solid white;
 	opacity: 0.75;
@@ -45,8 +49,6 @@ body {
 }
 
 .loginElement{
-    position: absolute;
-	right: 1px;
 	top: 10px;
     font-size: 60px;
     text-align: center;
