@@ -1,22 +1,23 @@
 body {
-    background-color: #E4E4E4;
+    background-color: white;
 	font-family: 'Lato', sans-serif;
 }
 
 .mainContainer{
-    width: 70%;
+    width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #title{
 	margin-top: 10px;
-	text-align: center;
+	text-align: left;
 	font-size: 50px;
 	font-weight: 900;
-	background-color: #b3d9ff;
+	background-color: #0082e6;
 	padding: 17px;
 	letter-spacing: 3px;
+	color: white;
 }
 
 .leftMenu{
@@ -47,8 +48,9 @@ body {
     text-align: center;
     width: 19vw;
     height: 10vh;
-    background: #b3d9ff;
+    background: #0082e6;
     user-select: none;
+	color: white;
 }
 .loginElement:hover{
 	cursor: pointer;
@@ -73,11 +75,15 @@ body {
 }
 
 .bottomDiv{
+	text-align: center;
     float: left;
     width: 100%;
     height: 30px;
+	font-size: 18px;
     background: black;
     margin-top: 5px;
+	color: white;
+	
 }
 
 #loginBox{
@@ -90,7 +96,9 @@ body {
     display: none;
     font-size: 2vw;
 	border: 2px solid black;
-	opacity: 0.7;
+	opacity: 0.9;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(0,0,0,0.9); 
+	box-shadow: 3px 3px 30px 5px rgba(0,0,0,0.9);
 }
 input[name=userLogin],
 input[name=userPassword]{
@@ -102,11 +110,21 @@ input[name=userPassword]{
 	font-size: 20px;
 	padding: 10px;
 	box-sizing: border-box;
+	outline: none;
+	margin-top: 20px;
+}
+input[name=userLogin]:focus,
+input[name=userPassword]:focus{
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7); 
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7); 
+	border: 2px solid blue;
+	background-color: #ccccff;
+	color: #000099;
 }
 
 input[type=submit]{
 	width: 300px;
-	background-color: blue;
+	background-color: #0082e6;
 	font-size: 20px;
 	color: white;
 	padding: 15px 10px;
@@ -115,6 +133,16 @@ input[type=submit]{
 	border-radius: 5px;
 	cursor: pointer;
 	letter-spacing: 2px;
+	outline: none;
+}
+
+input[type=submit]:focus{
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7); 
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7);
+}
+
+input[type=submit]:hover{
+	background-color: #6666ff;
 }
 
 .login{
@@ -156,6 +184,8 @@ input[type=submit]{
 .exitButton:hover{
 	background-color: red;
 	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7); 
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7);
 }
 
 textarea{
