@@ -196,6 +196,17 @@ textarea{
     display: none;
 }
 
-.addNote{
+.presentNotes{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
 
+.addNotes{
+	float: left;
+}
+
+.subject{
+	color: black;
+	font-size: 5vw;
 }

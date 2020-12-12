@@ -1,40 +1,62 @@
-// OBIEKT STRONY
-class pageObj {
-    constructor(content,id){  
+
+class Note {
+    constructor(subject,content){ 
+        this.subject = subject; 
         this.content = content;
-        this.id = id;
     }
 };
 
-let subjects=["Angielski","WIA","UKOS"]; // to beda obiekty pozniej
+subjects = [];
+
+
+
+function resetKurwa(){
+    document.getElementById("groupOfNotes").style.display = "none";
+    document.getElementById("groupOfHomeworks").style.display = "none";
+    document.getElementById("groupOfItems").style.display = "none";
+    document.getElementById("welcomeText").style.display = "none";
+}
+
 let homeworks=["Zadanie1","Zadanie2","Zadanie3"];
 
 function showNoteBlock(){
-    item = document.getElementById("groupOfNotes");
+    item = document.getElementById("presentNotes");
+    item.innerHTML = "";
+    resetKurwa();
+    item.style.display = "block";
     let noteContent="";
     for(let i=0;i<subjects.length;i++){
-        let subj = "<div class='subject'>"+subjects[i]+"</div>";
+        let subj = "<div class='subject'>"+subjects[i].subject+"</div>";
         noteContent += subj;
     }
+    document.getElementById("groupOfNotes").style.display = "block";
     document.getElementById("addNote").style.display = "block";
-    item.innerHTML = noteContent;
-    item.style.display = "block";
+    item.innerHTML += noteContent;
+    
     item.style.textAlign = "left";
 }
 
+
 function addSubject(){
+    let item1 = document.getElementById("subjectInput");
+    let item2 = document.getElementById("subjectContent");
+    let newNote = new Note(item1.value,item2.value)
+    subjects.push(newNote);
+    showNoteBlock();
+    item.value = "";
 }
+
 
 function showHomeworkBlock(){
     item = document.getElementById("groupOfHomeworks");
+    resetKurwa();
+    item.style.display = "block";
     let homeworkContent="";
     for(let i=0;i<subjects.length;i++){
         let hw = "<div class='subject'>"+homeworks[i]+"</div>";
         homeworkContent += hw;
     }
-    document.getElementsByClassName("group").style.display = "none";
     item.innerHTML = homeworkContent;
-    document.getElementsByClassName("groupOfHomeworks").style.display = "block";
     item.style.textAlign = "left";
 }
 
@@ -56,9 +78,10 @@ function quitLoginBox(){
 
 
 //---------------ONCLICKS-------------
-document.getElementById("homeButton").addEventListener("click",function(){
+/*document.getElementById("homeButton").addEventListener("click",function(){
     openPage(page[0]);
 })
+*/
 document.getElementById("loginElement").addEventListener("click",function(){
     showLoginBox();
 })
@@ -74,4 +97,12 @@ document.getElementById("leftMenuElement2").addEventListener("click",function(){
     showHomeworkBlock();
 })
 
+document.getElementById("leftMenuElement0").addEventListener("click",function(){
+    resetKurwa();
+    document.getElementById("welcomeText").style.display = "block";
+})
+
+document.getElementById("addButton").addEventListener("click",function(){
+    addSubject();
+})
 //--------------------

@@ -17,8 +17,9 @@ function getCookie(cname) {
 var cookiecheck = getCookie("login");
 	if (cookiecheck != "") 
 	{
-		console.log("Jest ciastko? To się wyloguj!");
-		document.getElementById("loginElement").innerHTML="<form action='logout.php'><input type=submit value='wyloguj'></form>";
+    console.log("Jest ciastko? To się wyloguj!");
+    document.getElementById("loginElement").innerHTML = "";
+    document.getElementById("loginElement").innerHTML="<form action='logout.php'><input type=submit value='wyloguj'></form>";
 	} 
 	else 
 	{

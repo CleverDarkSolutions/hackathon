@@ -12,6 +12,8 @@
 			Cyber Notes Program {...}
 		</div>
         <div id="leftMenu" class="leftMenu">
+            <div></div>
+            <div id="leftMenuElement0" class="leftMenuElement">Home</div>
             <div id="leftMenuElement1" class="leftMenuElement">Notatki</div>
             <div id="leftMenuElement2" class="leftMenuElement">Zadania</div>
             <div id="leftMenuElement3" class="leftMenuElement">Testy</div>
@@ -26,18 +28,20 @@
         </div>
         <div id="loginElement" class="loginElement">Autoryzacja</div>
         <div id="mainSpace" class="mainSpace">
-            <div class="groupOfItems" id="group groupOfItems" style="display: none;"></div>
-            <div class="groupOfNotes" id="group groupOfNotes" style="display: none;">
-                <div class="addNote" id="addNote">
+            <div class="welcomeText group" id="welcomeText" style="display:none;">Elo</div>
+            <div class="groupOfItems group" id="groupOfItems" style="display: none;"></div>
+            <div class="groupOfNotes" id="groupOfNotes">
+                <div class="presentNotes" id="presentNotes"></div>
+                <div class="addNote" id="addNote" style="display: none;">
                     Podaj przedmiot: <input id="subjectInput"><br>
                     Podaj zawartość(opcjonalnie) <input id="subjectContent"><br>
+                    <button class="addButton" id="addButton">add</button>
                 </div>
             </div>
-            <div class="groupOfHomeworks" id="groupOfHomeworks" style="display: none;"></div>
+            <div class="groupOfHomeworks" class="group" id="groupOfHomeworks"></div>
         </div>
 
         <div class="rightSpace" id="rightSpace">
-            <div id="homeButton" class="homeButton">H</div>
         </div>
 
         <div class="bottomDiv" id="bottomDiv">Hakaton 2020 &copy By Janusz Chili Avenger DustEyezz</div>
