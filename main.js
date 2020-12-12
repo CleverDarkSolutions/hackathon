@@ -8,6 +8,8 @@ class Note {
 
 subjects = [];
 
+
+
 function resetKurwa(){
     document.getElementById("groupOfNotes").style.display = "none";
     document.getElementById("groupOfHomeworks").style.display = "none";
@@ -42,10 +44,6 @@ function addSubject(){
     subjects.push(newNote);
     showNoteBlock();
     item.value = "";
-}
-
-function (){
-
 }
 
 
