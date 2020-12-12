@@ -15,5 +15,7 @@
 	$result = mysqli_query($connect,$query);
 	$array = mysqli_fetch_array($result);
 	setcookie("ajdik",$ajdik,time()+3600, "/");
+	$query="SELECT * FROM notatka WHERE id_wlasciciela like '$ajdik';";
+	setcookie("WYCIAGAMYTABELKE",$query,time()+3600, "/");
 	header("Location: index.html");
 ?>
