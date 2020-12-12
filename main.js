@@ -39,21 +39,19 @@ function showNoteBlock() {
             titleDiv.setAttribute("class","subjectElement");
             titleDiv.appendChild(titleText);
 
-            let contentDiv = document.createElement('div');
-            let contentText = document.createTextNode(subjects[i].content);
-            contentDiv.setAttribute("class","subjectElement");
-            contentDiv.appendChild(contentText);
-
             let subjectContentDiv = document.createElement('div');
             let subjectContentText = document.createTextNode(subjects[i].subject);
             subjectContentDiv.setAttribute("class","subjectElement");
             subjectContentDiv.appendChild(subjectContentText);
 
-
+            let contentDiv = document.createElement('div');
+            let contentText = document.createTextNode(subjects[i].content);
+            contentDiv.setAttribute("class","subjectElement");
+            contentDiv.appendChild(contentText);
 
             div1.appendChild(titleDiv);
-            div1.appendChild(contentDiv);
             div1.appendChild(subjectContentDiv);
+            div1.appendChild(contentDiv);
             item.appendChild(div1);
         }
     }
