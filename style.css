@@ -220,9 +220,10 @@ textarea{
 }
 
 .presentNotes{
+	font-size: 20px;
 	float: left;
-	width: 100px;
-	height: 100px;
+	width: 1300px;
+	height: 500px;
 }
 
 .addNote{
