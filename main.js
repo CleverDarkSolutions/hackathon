@@ -26,26 +26,39 @@ function showNoteBlock() {
     resetKurwa();
     item.style.display = "block";
     let noteContent = "";
+
+
     if (subjects.length > 0) {
         for (let i = 0; i < subjects.length; i++) {
-            let mainDiv = "<div class='subject' id='subject" + subjects[i].id + "'></div>";
-            let title = "<div class='subjectElement'>"+subjects[i].title+"</div>"; 
-            let content = "<div class='subjectElement'>"+subjects[i].content+"</div>"; 
-            let subject = "<div class='subjectElement'>"+subjects[i].subject+"</div>";
-            mainDiv += title;
-            mainDiv += content;
-            mainDiv += subject;
-            noteContent += mainDiv;
+            let div1 = document.createElement('div');
+            div1.setAttribute("class","subject");
+            div1.setAttribute("id","subject"+subjects[i].id);
+
+            let titleDiv = document.createElement('div');
+            let titleText = document.createTextNode(subjects[i].title);
+            titleDiv.setAttribute("class","subjectElement");
+            titleDiv.appendChild(titleText);
+
+            let contentDiv = document.createElement('div');
+            let contentText = document.createTextNode(subjects[i].content);
+            contentDiv.setAttribute("class","subjectElement");
+            contentDiv.appendChild(contentText);
+
+            let subjectContentDiv = document.createElement('div');
+            let subjectContentText = document.createTextNode(subjects[i].subject);
+            subjectContentDiv.setAttribute("class","subjectElement");
+            subjectContentDiv.appendChild(subjectContentText);
+
+
+
+            div1.appendChild(titleDiv);
+            div1.appendChild(contentDiv);
+            div1.appendChild(subjectContentDiv);
+            item.appendChild(div1);
         }
     }
-    else
-        noteContent = "Nie ma notatek";
-
-    item.innerHTML = noteContent;
-
     document.getElementById("groupOfNotes").style.display = "block";
     document.getElementById("addScene").style.display = "block";
-    item.innerHTML += noteContent;
 
     item.style.textAlign = "left";
 }
