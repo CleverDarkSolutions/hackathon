@@ -192,4 +192,5 @@ document.querySelectorAll('.leftMenuElement').forEach(function(item){
         document.getElementById("noteConfig").style.display = "none";
     })
 })
-//--------------------
+
+document.getElementById("welcomeText").style.display = "block";
