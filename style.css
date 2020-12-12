@@ -73,6 +73,7 @@ a:hover{
 	display: flex;
 	justify-content: space-between;
 	background-color: #0082e6;
+	user-select: none;
 }
 
 .leftMenu{
@@ -88,6 +89,7 @@ a:hover{
     border-bottom: 2px solid white;
 	opacity: 0.75;
 	padding: 20px;
+	user-select: none;
 }
 
 .leftMenuElement:hover{
@@ -427,6 +429,9 @@ button[id="addButton"]:hover{
 	top: 5vh;
 	left: 5vw;
 	font-size: 30px;
+	word-wrap: break-word;
+	overflow-y: scroll;
+	border: none
 }
 
 .editNote{
@@ -445,6 +450,6 @@ button[id="addButton"]:hover{
 	position: absolute;
 	right: 5px;
 	bottom: 5px;
-	background:#4CAF50
+	background: #8DB4F7;
 }
 

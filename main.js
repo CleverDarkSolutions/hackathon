@@ -28,9 +28,10 @@ function saveChanges(id, changes){
 
 function editNote(id){
 
-    let textArea = document.createElement('input');
+    let textArea = document.createElement('textarea');
     textArea.setAttribute("class","editText");
     textArea.setAttribute("id","editText");
+    //textArea.setAttribute("cols",20);
     textArea.value = subjects[id].content;
 
     let div1 = document.createElement('div');
