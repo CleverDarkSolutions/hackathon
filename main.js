@@ -1,9 +1,10 @@
 //-----------------BACKEND---VARS----------------
 
+let subjects = ["Angielski","UKOS","WIA"];
+
 //----------------------------------------------
 
 //-------------INNER--HTMLS-------------------------
-page1 = "<input>";
 
 
 // OBIEKT STRONY
@@ -16,7 +17,7 @@ class Page {
 
 page = [];
 page[0] = new Page("Witamy");
-page[1] = new Page(page1,1);
+page[1] = new Page("Pierwsza",1);
 page[2] = new Page("Druga",2);
 page[3] = new Page("Trzecia",3);
 page[4] = new Page("Cztery",4);
@@ -29,7 +30,7 @@ function openPage(page) {
 
 // DODAWANIE EVENTLISTENEROW - POTEM DO STARTU DODAC
 function addListenersLeftMenu() {
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 6; i++) {
         let item = document.getElementById("leftMenuElement" + i);
         item.addEventListener("click", function () {
             openPage(page[i]);
@@ -53,8 +54,13 @@ function quitLoginBox(){
     bg.style.filter = "none";
 }
 
-function addTask(){
- 
+function noteScreen(){
+    let item = document.getElementById("groupOfItems");
+    for(let i=0;i<subjects.length;i++){
+        let oneSubject = "<div class='subject'>"+subjects[i]+"</div>";
+        item.innerHTML += oneSubject;
+    }
+    item.style.display = "block";
 }
 
 //---------------ONCLICKS-------------
@@ -67,6 +73,9 @@ document.getElementById("loginElement").addEventListener("click",function(){
 document.getElementById("exitButton").addEventListener("click",function(){
     quitLoginBox();
 })
+document.getElementById("leftMenuElement1").addEventListener("click",function(){
+    noteScreen();
+});
 
 //--------------------
 window.onload = function(){

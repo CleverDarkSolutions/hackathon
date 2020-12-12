@@ -122,3 +122,7 @@ textarea{
     height: 65vh;
     background: powderblue;
 }
+
+.groupOfItems{
+    display: none;
+}
