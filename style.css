@@ -220,29 +220,40 @@ textarea{
 	height: 100px;
 }
 
-.addNotes{
+.addNote{
 	float: left;
 }
 
 .subject{
 	color: black;
-	font-size: 5vw;
+	font-size: 3vw;
 }
 
 .addScene{
+	background-color: #4CAF50;
+	border: none;
 	color: white;
+	padding: 5px 100px;
+	text-align: center;
+	text-decoration: none;
+	display: none;
+	font-size: 16px;
+	width:80px;
+	position:absolute; 
+	right:8.3vw; 
 }
 
 .noteConfig{
 	position: absolute;
-	font-size: 3vw;
+	font-size: 2vw;
 	color: white;
 	top: 10vh;
 	left: 20vw;
-	width: 50vw;
-	height: 50vh;
-	background: tomato;
+	width: 60vw;
+	height: 60vh;
+	background: #424f61;
 }
+
 
 .middleground{
 	border: 2px solid #6666ff;
