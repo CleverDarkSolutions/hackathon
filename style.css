@@ -242,7 +242,10 @@ textarea{
 	position:absolute; 
 	right:8.3vw; 
 }
-
+.addScene:hover{
+	background-color: #317034;
+	cursor: pointer;
+}
 .noteConfig{
 	position: absolute;
 	font-size: 2vw;
