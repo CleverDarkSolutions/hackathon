@@ -237,12 +237,12 @@ textarea{
 	background-color: #4CAF50;
 	border: none;
 	color: white;
-	padding: 5px 100px;
+	padding: 5px 50px;
 	text-align: center;
 	text-decoration: none;
 	display: none;
 	font-size: 16px;
-	width:80px;
+	width:50px;
 	position:absolute; 
 	right:8.3vw; 
 }
