@@ -91,7 +91,7 @@ function openNotes(n) {
 }
 
 
-
+/*
 function showHomeworkBlock() {
     item = document.getElementById("groupOfHomeworks");
     resetKurwa();
@@ -104,7 +104,7 @@ function showHomeworkBlock() {
     item.innerHTML = homeworkContent;
     item.style.textAlign = "left";
 }
-
+*/
 // LOGOWANIE
 
 function showLoginBox() {
@@ -137,10 +137,11 @@ document.getElementById("exitButton").addEventListener("click", function () {
 document.getElementById("leftMenuElement1").addEventListener("click", function () {
     showNoteBlock();
 })
-
+/*
 document.getElementById("leftMenuElement2").addEventListener("click", function () {
     showHomeworkBlock();
 })
+*/
 
 document.getElementById("leftMenuElement0").addEventListener("click", function () {
     resetKurwa();
