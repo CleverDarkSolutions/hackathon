@@ -1,45 +1,41 @@
 body {
-    padding: 0;
-    margin: 0;
+    background-color: #f1f1f1;
+	font-family: 'Lato', sans-serif;
 }
 
 .mainContainer{
-    width: 100%;
-    height: 100%;
+    width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 900;
+	background-color: #5A96F9;
+	padding: 20px;
+	letter-spacing: 3px;
 }
 
 .leftMenu{
-    width: 10vw;
-    background-color: lightcoral;
-    height: 77vh;
     float: left;
+	font-size: 40px;
+	background-color: #5A96F9;
+	margin-top: 2px;
 }
 
 .leftMenuElement{
-    font-size: 2vw;
-    padding-top: 5vh;
-    text-align: center;
-    color: white;
-    height: 5.23vw;
-    border: 5px solid white;
-    border-top: none;
+    border-bottom: 2px solid white;
+	opacity: 0.75;
+	padding: 20px;
 }
 
 .leftMenuElement:hover{
-    font-size: 2.3vw;
-    color:black;
-}
-
-.topSideElement{
-    float: left;
-    font-size: 3vw;
-    position: relative;
-    text-align: center;
-    left: 0vw;
-    height: 10vh;
-    width: 65vw;
-    border: 5px solid white;
-    background: lightgoldenrodyellow;
+    background-color: #0060FF;
+	cursor: pointer;
+	opacity: 0.9;
 }
 
 .loginElement{
@@ -61,17 +57,6 @@ body {
     float: left;
     background: powderblue;
     text-align: center;
-}
-
-.rightSpace{
-    position: absolute;
-    right: 0vw;
-    top: 5.5vw;
-    width: 4vw;
-    height: 65vh;
-    font-size: 2vw;
-    border: 5px solid white;    
-    background: lightsalmon;
 }
 
 .homeButton{
@@ -121,4 +106,8 @@ textarea{
     width: 86vw;
     height: 65vh;
     background: powderblue;
+}
+
+.groupOfItems{
+    display: none;
 }

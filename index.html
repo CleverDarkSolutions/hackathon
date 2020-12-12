@@ -7,6 +7,9 @@
 
 <body onload="loginCheck()">
     <div id="mainContainer" class="mainContainer">
+		<div id="title">
+			Cyber Notes Program {...}
+		</div>
         <div id="leftMenu" class="leftMenu">
             <div id="leftMenuElement1" class="leftMenuElement">Notatki</div>
             <div id="leftMenuElement2" class="leftMenuElement">Zadania</div>
@@ -24,7 +27,6 @@
             <div class="groupOfItems" id="groupOfItems"></div>
 
         </div>
-
         <div class="rightSpace" id="rightSpace">chuj</div>
 
         <div class="bottomDiv" id="bottomDiv"></div>
@@ -34,16 +36,16 @@
         <div class="register">
             <form action="register.php" method="POST">
                 Rejestracja<br>
-                Login: <input name="userLogin"> <br>
+                Login: <input name="userName"> <br>
                 Haslo: <input name="userPassword"> <br>
                 <input type="submit">
             </form>
         </div>
 
         <div class="login">
-            <form action="login.php" method="POST">
+            <form action="register.php" method="POST">
                 Logowanie<br>
-                Login: <input name="userLogin"> <br>
+                Login: <input name="userName"> <br>
                 Haslo: <input name="userPassword"> <br>
                 <input type="submit">
             </form>
@@ -52,6 +54,32 @@
     </div>
 
     <script src="main.js"></script>
+</body>
+
+</html>
+<div class="loginBox" id="loginBox">
+    <div class="exitButton" id="exitButton">X</div>
+    <div class="register">
+        <form action="register.php" method="POST">
+            Rejestracja<br>
+            Login: <input name="userName"> <br>
+            Haslo: <input name="userPassword"> <br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <div class="login">
+        <form action="login.php" method="POST">
+            Logowanie<br>
+            Login: <input name="userName"> <br>
+            Haslo: <input name="userPassword"> <br>
+            <input type="submit">
+        </form>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
 </body>
 
 </html>
