@@ -1,7 +1,6 @@
 <?php 
 	$login = $_POST['userLogin'];
 	$haslo = $_POST['userPassword'];
-	
 	$db_user = 'root';
     $db_name = 'devmuster4_db';
     $db_pass = '';
