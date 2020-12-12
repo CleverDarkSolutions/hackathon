@@ -100,7 +100,7 @@ body {
 	-webkit-box-shadow: 3px 3px 30px 5px rgba(0,0,0,0.9); 
 	box-shadow: 3px 3px 30px 5px rgba(0,0,0,0.9);
 }
-input[name=userLogin],
+input[name=parentCode],input[name=userLogin],
 input[name=userPassword]{
 	width: 300px;
 	background-color: #efefef;
@@ -113,6 +113,7 @@ input[name=userPassword]{
 	outline: none;
 	margin-top: 20px;
 }
+input[name=parentCode]:focus,
 input[name=userLogin]:focus,
 input[name=userPassword]:focus{
 	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.7); 
