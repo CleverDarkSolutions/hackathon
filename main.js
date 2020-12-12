@@ -1,28 +1,22 @@
-//-----------------BACKEND---VARS----------------
-
-let subjects = ["Angielski","UKOS","WIA"];
-
-//----------------------------------------------
-
-//-------------INNER--HTMLS-------------------------
-
+var chuj = 0;
+var subjects = ["Angielski","UKOS","WIA"];
 
 // OBIEKT STRONY
-class Page {
+class pageObj {
     constructor(content,id){  
         this.content = content;
         this.id = id;
     }
 };
 
-page = [];
-page[0] = new Page("Witamy");
-page[1] = new Page("Pierwsza",1);
-page[2] = new Page("Druga",2);
-page[3] = new Page("Trzecia",3);
-page[4] = new Page("Cztery",4);
-page[5] = new Page("Piec",5);
-page[6] = new Page("Szesc",6);
+let page = [];
+page[0] = new pageObj("Witamy");
+page[1] = new pageObj("Pierwsza",1);
+page[2] = new pageObj("Druga",2);
+page[3] = new pageObj("Trzecia",3);
+page[4] = new pageObj("Cztery",4);
+page[5] = new pageObj("Piec",5);
+page[6] = new pageObj("Szesc",6);
 //ZMIENIANIE ZAWARTOSCI NOTESU
 function openPage(page) {
     mainSpace.innerHTML = page.content;
@@ -55,7 +49,7 @@ function quitLoginBox(){
 }
 
 function noteScreen(){
-    let item = document.getElementById("groupOfItems");
+    let item = document.getElementById("mainSpace");
     for(let i=0;i<subjects.length;i++){
         let oneSubject = "<div class='subject'>"+subjects[i]+"</div>";
         item.innerHTML += oneSubject;
