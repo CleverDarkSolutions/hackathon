@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+//-----------------BACKEND---VARS----------------
+
+//----------------------------------------------
+
+//-------------INNER--HTMLS-------------------------
+page1 = "<input>";
+
+
+>>>>>>> parent of 80a08de... commit
 // OBIEKT STRONY
 class pageObj {
     constructor(content,id){  
@@ -6,6 +17,7 @@ class pageObj {
     }
 };
 
+<<<<<<< HEAD
 let page = [];
 page[0] = new pageObj("Witamy",0);
 page[1] = new pageObj("Pierwsza",1);
@@ -14,6 +26,16 @@ page[3] = new pageObj("Trzecia",3);
 page[4] = new pageObj("Cztery",4);
 page[5] = new pageObj("Piec",5);
 page[6] = new pageObj("Szesc",6);
+=======
+page = [];
+page[0] = new Page("Witamy");
+page[1] = new Page(page1,1);
+page[2] = new Page("Druga",2);
+page[3] = new Page("Trzecia",3);
+page[4] = new Page("Cztery",4);
+page[5] = new Page("Piec",5);
+page[6] = new Page("Szesc",6);
+>>>>>>> parent of 80a08de... commit
 //ZMIENIANIE ZAWARTOSCI NOTESU
 function openPage(page) {
     mainSpace.innerHTML = page.content;
@@ -21,7 +43,7 @@ function openPage(page) {
 
 // DODAWANIE EVENTLISTENEROW - POTEM DO STARTU DODAC
 function addListenersLeftMenu() {
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 7; i++) {
         let item = document.getElementById("leftMenuElement" + i);
         item.addEventListener("click", function () {
             openPage(page[i]);
@@ -45,6 +67,7 @@ function quitLoginBox(){
     bg.style.filter = "none";
 }
 
+<<<<<<< HEAD
 function noteScreen(){
     let item = document.getElementById("mainSpace");
     let subjects = ["Angielski","UKOS","WIA"];
@@ -53,6 +76,10 @@ function noteScreen(){
         item.innerHTML += oneSubject;
     }
     item.style.display = "block";
+=======
+function addTask(){
+ 
+>>>>>>> parent of 80a08de... commit
 }
 
 //---------------ONCLICKS-------------
@@ -65,9 +92,6 @@ document.getElementById("loginElement").addEventListener("click",function(){
 document.getElementById("exitButton").addEventListener("click",function(){
     quitLoginBox();
 })
-document.getElementById("leftMenuElement1").addEventListener("click",function(){
-    noteScreen();
-});
 
 //--------------------
 window.onload = function(){
