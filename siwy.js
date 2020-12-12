@@ -19,7 +19,8 @@ var cookiecheck = getCookie("login");
 	{
     console.log("Jest ciastko? To się wyloguj!");
     document.getElementById("loginElement").innerHTML="<form action='logout.php'><input type=submit value='wyloguj'></form>";
-	} 
+	document.getElementById("Witanie").innerHTML="<br>Witaj " + cookiecheck;
+	}
 	else 
 	{
 		console.log("Nie ma ciastka? To się zaloguj!");
