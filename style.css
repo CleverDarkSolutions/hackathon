@@ -7,6 +7,7 @@ body {
     width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #fff4E4;
 }
 
 #title{
@@ -14,7 +15,7 @@ body {
 	text-align: center;
 	font-size: 50px;
 	font-weight: 900;
-	background-color: #0060FF;
+	background-color: #b3d9ff;
 	padding: 17px;
 	letter-spacing: 3px;
 }
@@ -22,7 +23,7 @@ body {
 .leftMenu{
     float: left;
 	font-size: 40px;
-	background-color: #0060FF;
+	background-color: #b3d9ff;
 	margin-top: 2px;
 }
 
@@ -46,7 +47,7 @@ body {
     text-align: center;
     width: 19vw;
     height: 10vh;
-    background: #0060FF;
+    background: #b3d9ff;
     user-select: none;
 }
 .loginElement:hover{
@@ -55,7 +56,7 @@ body {
 }
 
 .mainSpace{
-    width: 86vw;
+    width: 80%;
     height: 65vh;
     border: 5px solid white;
     font-size: 3vw;
