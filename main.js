@@ -6,27 +6,36 @@ class pageObj {
     }
 };
 
-let page = [];
-page[0] = new pageObj("Witamy",0);
-page[1] = new pageObj("Pierwsza",1);
-page[2] = new pageObj("Druga",2);
-page[3] = new pageObj("Trzecia",3);
-page[4] = new pageObj("Cztery",4);
-page[5] = new pageObj("Piec",5);
-page[6] = new pageObj("Szesc",6);
-//ZMIENIANIE ZAWARTOSCI NOTESU
-function openPage(page) {
-    mainSpace.innerHTML = page.content;
+let subjects=["Angielski","WIA","UKOS"]; // to beda obiekty pozniej
+let homeworks=["Zadanie1","Zadanie2","Zadanie3"];
+
+function showNoteBlock(){
+    item = document.getElementById("groupOfNotes");
+    let noteContent="";
+    for(let i=0;i<subjects.length;i++){
+        let subj = "<div class='subject'>"+subjects[i]+"</div>";
+        noteContent += subj;
+    }
+    document.getElementById("addNote").style.display = "block";
+    item.innerHTML = noteContent;
+    item.style.display = "block";
+    item.style.textAlign = "left";
 }
 
-// DODAWANIE EVENTLISTENEROW - POTEM DO STARTU DODAC
-function addListenersLeftMenu() {
-    for (let i = 1; i < 6; i++) {
-        let item = document.getElementById("leftMenuElement" + i);
-        item.addEventListener("click", function () {
-            openPage(page[i]);
-        });
+function addSubject(){
+}
+
+function showHomeworkBlock(){
+    item = document.getElementById("groupOfHomeworks");
+    let homeworkContent="";
+    for(let i=0;i<subjects.length;i++){
+        let hw = "<div class='subject'>"+homeworks[i]+"</div>";
+        homeworkContent += hw;
     }
+    document.getElementsByClassName("group").style.display = "none";
+    item.innerHTML = homeworkContent;
+    document.getElementsByClassName("groupOfHomeworks").style.display = "block";
+    item.style.textAlign = "left";
 }
 
 // LOGOWANIE
@@ -45,16 +54,6 @@ function quitLoginBox(){
     bg.style.filter = "none";
 }
 
-function noteScreen(){
-    let item = document.getElementById("mainSpace");
-    let subjects = ["Angielski","UKOS","WIA"];
-    for(let i=0;i<subjects.length;i++){
-        let oneSubject = "<div class='subject'>"+subjects[i]+"</div>";
-        console.log(oneSubject);
-        item.innerHTML += oneSubject;
-    }
-    item.style.display = "block";
-}
 
 //---------------ONCLICKS-------------
 document.getElementById("homeButton").addEventListener("click",function(){
@@ -67,7 +66,12 @@ document.getElementById("exitButton").addEventListener("click",function(){
     quitLoginBox();
 })
 
+document.getElementById("leftMenuElement1").addEventListener("click",function(){
+    showNoteBlock();
+})
+
+document.getElementById("leftMenuElement2").addEventListener("click",function(){
+    showHomeworkBlock();
+})
+
 //--------------------
-window.onload = function(){
-    addListenersLeftMenu();
-}

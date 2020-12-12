@@ -66,9 +66,7 @@ body {
 }
 
 .homeButton{
-    position: absolute;
-    left: 2vw;
-    top: 1vh;
+	float: left;
     width: 60px;
     height: 60px;
     background: lightskyblue;
@@ -164,12 +162,10 @@ textarea{
     white-space: nowrap;
 }
 
-.mainspace input{
-    width: 86vw;
-    height: 65vh;
-    background: powderblue;
-}
-
 .groupOfItems{
     display: none;
+}
+
+.addNote{
+
 }
