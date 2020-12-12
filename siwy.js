@@ -25,7 +25,7 @@ var cookiecheck = getCookie("login");
 	{
 		console.log("Nie ma ciastka? To się zaloguj!");
 	}
-	
+/*	
 function writeList(){
 	var table = '<?php 
 				$ajdik = $_COOKIE['ajdik'];
@@ -51,3 +51,4 @@ function writeList(){
 				'
 	document.getElementById("noteList").innerHTML= table;
 }
+*/

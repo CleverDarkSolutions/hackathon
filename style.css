@@ -210,3 +210,18 @@ textarea{
 	color: black;
 	font-size: 5vw;
 }
+
+.addScene{
+	color: white;
+}
+
+.noteConfig{
+	position: absolute;
+	font-size: 3vw;
+	color: white;
+	top: 10vh;
+	left: 20vw;
+	width: 50vw;
+	height: 50vh;
+	background: tomato;
+}
