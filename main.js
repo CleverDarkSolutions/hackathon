@@ -1,6 +1,3 @@
-var chuj = 0;
-var subjects = ["Angielski","UKOS","WIA"];
-
 // OBIEKT STRONY
 class pageObj {
     constructor(content,id){  
@@ -10,7 +7,7 @@ class pageObj {
 };
 
 let page = [];
-page[0] = new pageObj("Witamy");
+page[0] = new pageObj("Witamy",0);
 page[1] = new pageObj("Pierwsza",1);
 page[2] = new pageObj("Druga",2);
 page[3] = new pageObj("Trzecia",3);
@@ -50,6 +47,7 @@ function quitLoginBox(){
 
 function noteScreen(){
     let item = document.getElementById("mainSpace");
+    let subjects = ["Angielski","UKOS","WIA"];
     for(let i=0;i<subjects.length;i++){
         let oneSubject = "<div class='subject'>"+subjects[i]+"</div>";
         item.innerHTML += oneSubject;
