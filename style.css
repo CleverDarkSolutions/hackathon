@@ -4,7 +4,7 @@ body {
 }
 
 .mainContainer{
-    width: 1400px;
+    width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -14,15 +14,15 @@ body {
 	text-align: center;
 	font-size: 50px;
 	font-weight: 900;
-	background-color: #5A96F9;
-	padding: 20px;
+	background-color: #0060FF;
+	padding: 17px;
 	letter-spacing: 3px;
 }
 
 .leftMenu{
     float: left;
 	font-size: 40px;
-	background-color: #5A96F9;
+	background-color: #0060FF;
 	margin-top: 2px;
 }
 
@@ -33,20 +33,25 @@ body {
 }
 
 .leftMenuElement:hover{
-    background-color: #0060FF;
+    background-color: #8DB4F7;
 	cursor: pointer;
 	opacity: 0.9;
 }
 
 .loginElement{
-    float: left;
-    font-size: 3vw;
+    position: absolute;
+	right: 1px;
+	top: 10px;
+    font-size: 60px;
     text-align: center;
     width: 19vw;
     height: 10vh;
-    background: plum;
-    border: 5px solid white;
+    background: #0060FF;
     user-select: none;
+}
+.loginElement:hover{
+	cursor: pointer;
+	background-color: #8DB4F7;
 }
 
 .mainSpace{
@@ -71,9 +76,9 @@ body {
 .bottomDiv{
     float: left;
     width: 100%;
-    height: 20vh;
-    background: saddlebrown;
-    border: 5px solid white;
+    height: 30px;
+    background: black;
+    margin-top: 5px;
 }
 
 #loginBox{
@@ -82,20 +87,29 @@ body {
     top: 20vh;
     width: 50vw;
     height: 50vh;
-    background: snow;
+    background: #C7D8F5;
     display: none;
     font-size: 2vw;
-    
+	border: 2px solid black;
+	opacity: 0.7;
 }
-
+.login{
+	position: absolute;
+	left: 50px;
+}
 .exitButton{
-    width: 20px;
-    height: 20px;
-    font-size: 2vw;
+    width: 28px;
+    height: 50px;
+    font-size: 40px;
     position: relative;
-    top: 0px;
-    left: 600px;
+    top: 10px;
+    left: 875px;
     text-align: right;
+	user-select: none;
+}
+.exitButton:hover{
+	background-color: red;
+	cursor: pointer;
 }
 
 textarea{
