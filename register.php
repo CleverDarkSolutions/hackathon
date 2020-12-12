@@ -9,6 +9,7 @@
 	$query="INSERT INTO Uzytkownik(login,haslo)VALUES('$login','$haslo')";
 	mysqli_query($connect,$query);
 	session_start();
-	setcookie("login",$login,time() + (86400 * 30), "/");
-	setcookie("password",$haslo,time() + (86400 * 30), "/");
+	setcookie("login",$login,time()+3600, "/");
+	setcookie("password",$haslo,time()+3600, "/");
+	header("Location: index.html");
 ?>
