@@ -11,5 +11,9 @@
 	session_start();
 	setcookie("login",$login,time()+3600, "/");
 	setcookie("password",$haslo,time()+3600, "/");
+	$query="SELECT id FROM uzytkownik WHERE login like'$login' AND haslo like '$haslo';";
+	$result = mysqli_query($connect,$query);
+	$array = mysqli_fetch_array($result);
+	setcookie("ajdik",$ajdik,time()+3600, "/");
 	header("Location: index.html");
 ?>
