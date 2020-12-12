@@ -38,6 +38,11 @@ body {
 	width: 80px;
 	vertical-align: middle;	
 }
+.Gorny_panel{
+	display: flex;
+	justify-content: space-between;
+	background-color: #0082e6;
+}
 
 .leftMenu{
     float: left;
@@ -46,12 +51,9 @@ body {
 	margin-top: 2px;
 	
 }
-.Gorny_panel{
-	display: flex;
-	justify-content: space-between;
-	background-color: #0082e6;
-}
+
 .leftMenuElement{
+	height: 60px;
     border-bottom: 2px solid white;
 	opacity: 0.75;
 	padding: 20px;
@@ -98,7 +100,7 @@ body {
 	text-align: center;
     float: left;
     width: 100%;
-    height: 30px;
+    height: 150px;
 	font-size: 18px;
     background: black;
     margin-top: 5px;
@@ -244,7 +246,7 @@ textarea{
 	font-size: 16px;
 	width:50px;
 	position:absolute; 
-	right:10.55vw; 
+	right:8.3vw; 
 }
 .addScene:hover{
 	background-color: #317034;
