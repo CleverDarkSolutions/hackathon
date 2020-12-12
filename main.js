@@ -44,9 +44,6 @@ function addSubject(){
     item.value = "";
 }
 
-function (){
-
-}
 
 
 function showHomeworkBlock(){
