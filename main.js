@@ -19,6 +19,38 @@ function resetKurwa() {
 
 let homeworks = ["Zadanie1", "Zadanie2", "Zadanie3"];
 
+
+function saveChanges(id, changes){
+    subjects[id].content = changes;
+    document.getElementById("editText").style.display = "none";
+    document.getElementById(id).style.display = "none";
+}
+
+function editNote(id){
+
+    let textArea = document.createElement('input');
+    textArea.setAttribute("class","editText");
+    textArea.setAttribute("id","editText");
+    textArea.value = subjects[id].content;
+
+    let div1 = document.createElement('div');
+    div1.setAttribute("class","editNote");
+    div1.setAttribute("id",id);
+    div1.textContent = "Edycja notatki";
+
+    let button1 = document.createElement('button');
+    button1.textContent = "Zapisz zmiany";
+    button1.setAttribute("id","buttonKox");
+    button1.addEventListener("click",function(){
+        saveChanges(id,textArea.value);
+    })
+
+    div1.append(button1)
+    div1.appendChild(textArea);
+    document.getElementById("mainContainer").appendChild(div1);
+
+}
+
 function showNoteBlock() {
     console.log("popoga");
     item = document.getElementById("presentNotes");
@@ -55,6 +87,9 @@ function showNoteBlock() {
             div1.appendChild(contentDiv);
             div1.appendChild(subjectContentDiv);
             item.appendChild(div1);
+            div1.addEventListener("click",function(){
+                editNote(i);
+            })
         }
     }
     document.getElementById("groupOfNotes").style.display = "block";
@@ -84,10 +119,6 @@ function openAddNoteScene(){
     document.getElementById("presentNotes").style.display = "none";
     document.getElementById("noteConfig").style.display = "block";  
     console.log("chuj");
-}
-
-function openNotes(n) {
-    let item = document.getElementById
 }
 
 

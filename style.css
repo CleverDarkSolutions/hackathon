@@ -387,3 +387,30 @@ button[id="addButton"]:hover{
 	height: 4.5vw;
 	overflow: hidden;
 }
+
+.editText{
+	width: 40vw;
+	height: 20vw;
+	background: slateblue;
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+	font-size: 20px;
+}
+
+.editNote{
+	width: 50vw;
+	height: 30vw;
+	background: sienna;
+	position: absolute;
+	left: 30vw;
+	top: 20vh;
+}
+
+#buttonKox{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
