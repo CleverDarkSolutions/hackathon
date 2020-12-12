@@ -1,5 +1,7 @@
 <?php 
-	$login = $_POST['userLogin'];
+	$parent = $_POST['parentCode'];
+	if($parent!="")
+	{$login = $_POST['userLogin'];
 	$haslo = $_POST['userPassword'];
 	$db_user = 'root';
     $db_name = 'devmuster4_db';
@@ -15,7 +17,9 @@
 	$result = mysqli_query($connect,$query);
 	$array = mysqli_fetch_array($result);
 	setcookie("ajdik",$ajdik,time()+3600, "/");
-	$query="SELECT * FROM notatka WHERE id_wlasciciela like '$ajdik';";
-	setcookie("WYCIAGAMYTABELKE",$query,time()+3600, "/");
-	header("Location: index.html");
+	header("Location: index.html");}
+	else
+	{
+		header("Location: sprzedaz.html");
+	}
 ?>
